@@ -1,0 +1,19 @@
+<section>
+  <button (click)="pushNextValue()">push next value</button>
+  <label>Selector logic runs counter: {{subjectCounter}}</label></section>
+<section>
+  <button (click)="doSomethingWithData($event)" #doButton>do something with data</button>
+  <label>Subscription logic runs counter: {{subscriptionCounter}}</label>
+</section>
+
+<section *ngIf="subscriptionCounter > 0">
+  <p>
+    use console to see value inside subject.
+    please notice two things that are wrong here:
+  </p>
+  <ul>
+    <li>Subscription logic is triggered even when button not clicked</li>
+    <li>Multiple subscriptions</li>
+  </ul>
+</section>
+

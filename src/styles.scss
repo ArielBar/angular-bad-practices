@@ -1,0 +1,14 @@
+@import './styles/_variables';
+
+body{
+  margin:0;
+  padding:0;
+  font-size: 1.5em;
+}/* You can add global styles to this file, and also import other style files */
+main{
+  padding:$standard-space;
+}
+label{
+  margin: 0 $standard-space;
+  font-weight: bold;
+}

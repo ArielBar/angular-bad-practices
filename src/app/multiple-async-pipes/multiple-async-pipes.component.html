@@ -1,0 +1,22 @@
+<section>
+  <p>Lets write the first name here: {{(person$ | async)?.firstName}}</p>
+</section>
+<section>
+  <p>Lets write the Last name here: {{(person$ | async)?.lastName}}</p>
+</section>
+
+<ng-container  *ngIf="person$ | async as person">
+<section>
+  <p>Lets write the first name here: {{person.firstName}}</p>
+</section>
+<section >
+  <p>Lets write the Last name here: {{person.lastName}}</p>
+</section>
+</ng-container>
+
+<ng-container *ngIf="{address:address$ | async ,person:person$ | async} as dataContainer">
+  <section >
+    <p>This is a story about a man named {{dataContainer.person?.firstName}} who lives on {{dataContainer.address?.street}} street</p>
+  </section>
+</ng-container>
+
